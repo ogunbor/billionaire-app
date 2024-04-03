@@ -25,6 +25,12 @@ class _MyAppState extends State<MyApp> {
     await prefs.setDouble('balance', balance);
   }
 
+  @override
+  void initState() {
+    loadBalance();
+    super.initState();
+  }
+
   void loadBalance() async {
     // Obtain shared preferences.
     final SharedPreferences prefs = await SharedPreferences.getInstance();
