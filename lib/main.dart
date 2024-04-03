@@ -1,3 +1,4 @@
+import 'package:billionaire_app/add_money_button.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -67,17 +68,7 @@ class _MyAppState extends State<MyApp> {
                   ],
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red[700],
-                    minimumSize: const Size(double.infinity, 0),
-                  ),
-                  onPressed: addMoney,
-                  child: const Text("Add Money"),
-                ),
-              ),
+              AddMoneyButton(addMoneyFunction: addMoney),
             ],
           ),
         ),
